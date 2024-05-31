@@ -31,7 +31,7 @@ selected_articles <- selected_articles %>%
 # Bar chart for article count by worry category
 bar_plot <- ggplot(selected_articles, aes(y = worries, fill = worries)) +
   geom_bar() +
-  theme_minimal() +
+  theme_bw() +
   labs(title = "Article Count by Worry Category", x = "Count", y = "Worry Category") 
 
 
@@ -50,6 +50,10 @@ trend_plot <- ggplot(aggregated_data, aes(x = date, y = count, color = worries))
   scale_y_continuous(expand = expansion(mult = c(0, 0.05))) +
   scale_x_date(expand = expansion(mult = c(0, 0.05)))
 
+ggplot(aggregated_data, aes(x = date, y = count, color = worries)) +
+  geom_line(size = 1) +
+  theme_minimal() +
+  labs(title = "Trend of Articles Over Time by Worry Category", x = "Date", y = "Count", color = "Worry Category")
 
 ## WORD CLOUD----
 wordcloud(words = count_data$worries, freq = count_data$count, 
