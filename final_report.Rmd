@@ -21,15 +21,39 @@ In this project, two main aspects are visualized using a shiny app:
   Voting Results of Swiss Federal Elections: 
     Map the voting results, focusing on the strength of the winning party of each canton in       the 2023 Federal Election. 
 
-It can then be analysed if the majority/winning party's ideology aligns with the most salient concern of the citizens.
+This might give a clearer idea of which issues were more discussed leading to the election and whether the goals of the majority party align with these prominently covered issues.
 
+
+## Data Sources ----
+
+1. Media Coverage Data:
+    TheNewsAPI was utilized to gather media articles and related data from swiss sources.
+    (thenewsapi.com)
+
+2. Electoral Data:
+    Voting results of the Swiss Federal elections were obtained from the open data platform,      opendata.swiss
+    
+3. Geographical Data:
+     the shapefiles for canton boundaries, were sourced from Swisstopo—the Federal Office of       Topography of Switzerland.         
+     (https://www.swisstopo.admin.ch/de/landschaftsmodell-swissboundaries3d)
+     
 
 ## Data Operationalization ----
 
+Operationalization steps of Media Queries:
+
+1) The Credit Suisse Worry Barometer is used as a key reference. It provides statistics on the    main concerns of Swiss citizens (such as healthcare, immigration, environment etc).
+  (https://www.credit-suisse.com/sustainability/en/thought-leadership/worry-barometer.html)
+
+2) For each major topic identified by the Worry Barometer, specific search terms were created,    to search for articles from TheNewsAPI. The focus was on articles published within the        three months leading up to the election day - to capture the most relevant and recent media    coverage that could influence or reflect voters' preferences.
+   
+3) The only Swiss news source used was swissinfo.ch (English articles). Other popular sources    were ignored as they publish articles in German, French, or Italian, which I do not speak,    making it difficult to create appropriate search terms in those languages.
 
 
-```{r cars}
-summary(cars)
+
+
+```{r}
+
 ```
 
 ## Including Plots
