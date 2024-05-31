@@ -78,12 +78,7 @@ for (worry_label in names(search_terms)) {
   }
 }
 
-
-if (nrow(all_articles) > 0) {
-  print(all_articles)
-} else {
-  print("No articles found")
-}
+save(all_articles, file = "data_extracted/all_articles.RData")
 
 
 
