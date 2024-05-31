@@ -12,7 +12,8 @@ across cantons.
 - This might give us an idea of which issues were discussed more leading to the 
   election and does the majority party goals align with these issues 
 
-FILE STRUCTURE:
+FOLDER STRUCTURE:
+final_report.rmd: final project report
 
 scripts:
 - data_extraction: Fetch data from api and storing
