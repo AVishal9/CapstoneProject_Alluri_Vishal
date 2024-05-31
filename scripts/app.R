@@ -18,3 +18,15 @@ ui <- dashboardPage(
   )
 )
 
+# prepare 'count_data' and 'cantons_with_results'
+source("scripts/map_viz.R")
+
+server <- function(input, output) {
+  # Render the word cloud using prepared 'count_data'
+  output$wordCloud <- renderWordcloud2({
+    wordcloud2(count_data, size = 0.4)  # Assuming 'count_data' has 'words' and 'freq' columns
+  })
+
+}
+
+shinyApp(ui = ui, server = server)
