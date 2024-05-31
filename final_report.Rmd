@@ -1,0 +1,42 @@
+---
+title: "final_report"
+author: "Alluri_Vishal"
+date: "2024-05-31"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction ----
+
+Media plays a key role in shaping public opinion and political outcomes. In the context of elections, the frequency and focus of media coverage on certain topics increases the salience of these issues among public and influences their vote behavior. This project aims to visualize the interplay between media coverage of the top "worries" of Swiss citizens and the outcomes of Swiss Federal elections 2023.
+
+In this project, two main aspects are visualized using a shiny app:
+
+  Salience of Worries in Media: 
+    Examining the frequency of topics (top concerns of swiss citizens) in media articles to       gain insights into what issues are being emphasized in the public discourse leading up to     the elections.
+
+  Voting Results of Swiss Federal Elections: 
+    Map the voting results, focusing on the strength of the winning party of each canton in       the 2023 Federal Election. 
+
+It can then be analysed if the majority/winning party's ideology aligns with the most salient concern of the citizens.
+
+
+## Data Operationalization ----
+
+
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
