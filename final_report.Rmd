@@ -13,12 +13,12 @@ Media plays a key role in shaping public opinion and political outcomes. In the 
 In this project, two main aspects are visualized using a shiny app:
 
   Salience of Worries in Media: 
-    Examining the frequency of topics (top concerns of swiss citizens) in media articles to       gain insights into what issues are being emphasized in the public discourse leading up to     the elections.
+    Examining the frequency of topics (top concerns of swiss citizens) in media articles to gain insights into the issues being focused on in the public discourse.
 
   Voting Results of Swiss Federal Elections: 
-    Map the voting results, focusing on the strength of the winning party of each canton in       the 2023 Federal Election. 
+    Map the voting results, focusing on the strength of the winning party of each canton in the 2023 Federal Election. 
 
-This might give a clearer idea of which issues were more discussed leading to the election and whether the goals of the majority party align with these prominently covered issues.
+This might give a clearer idea of which issues were highly discussed leading to the election and whether the goals of the majority party align with these prominently covered issues.
 
 
 
@@ -29,10 +29,10 @@ This might give a clearer idea of which issues were more discussed leading to th
     (thenewsapi.com)
 
 2. Electoral Data:
-    Voting results of the Swiss Federal elections were obtained from the open data platform,      opendata.swiss
+    Voting results of the Swiss Federal elections were obtained from the open data platform, opendata.swiss
     
 3. Geographical Data:
-     the shapefiles for canton boundaries, were sourced from Swisstopo—the Federal Office of       Topography of Switzerland.         
+     the shapefiles for canton boundaries, were sourced from Swisstopo—the Federal Office of Topography of Switzerland.         
      (https://www.swisstopo.admin.ch/de/landschaftsmodell-swissboundaries3d)
 
      
@@ -41,10 +41,10 @@ This might give a clearer idea of which issues were more discussed leading to th
 
 ### 3.1) Operationalization steps of Media Queries:
 
-1) The Credit Suisse Worry Barometer is used as a key reference. It provides statistics on the    main concerns of Swiss citizens (such as healthcare, immigration, environment etc).
+1) The Credit Suisse Worry Barometer is used as a key reference. It provides statistics on the main concerns of Swiss citizens (such as healthcare, immigration, environment etc).
   (https://www.credit-suisse.com/sustainability/en/thought-leadership/worry-barometer.html)
 
-2) For each major topic identified by the Worry Barometer, specific search terms were created,    to search for articles from TheNewsAPI. The focus was on articles published within the        three months leading up to the election day - to capture the most relevant and recent media    coverage that could influence or reflect voters' preferences.
+2) For each major topic identified by the Worry Barometer, specific search terms were created,to search for articles from TheNewsAPI. The focus was on articles published within the three months leading up to the election day - to capture the most relevant and recent media coverage that could influence or reflect voters' preferences.
 
 ```{r}
 search_terms <- list(
@@ -61,7 +61,7 @@ search_terms <- list(
 )
 ```
    
-3) The only Swiss news source used was swissinfo.ch (English articles). Other popular sources    were ignored as they publish articles in German, French, or Italian, which I do not speak,    making it difficult to create appropriate search terms in those languages.
+3) The only Swiss news source used was swissinfo.ch (English articles). Other popular sources were ignored as they publish articles in German, French, or Italian, which I do not speak,    making it difficult to create appropriate search terms in those languages.
 
 
 
@@ -125,6 +125,9 @@ The salience of these topics in the media likely played a role in boosting SVP�
 Overall, this project shows that political parties should monitor media trends and tailor their campaigns accordingly.
 Parties can connect better with voters by focusing on the most salient issues, and improve their electoral appeal.
 
+NOTE: These findings are not accurate and only represent the analysis of results within the context of this project. This project only serves as a framework to be built upon.
+
+
 ## 6) Challenge 
 The primary challenge was finding a suitable news API that included Swiss sources. Many APIs either lacked Swiss content, were discontinued, or required expensive subscriptions. After countless hours of searching TheNewsAPI was found (the most affordable option). Learning to use each API, understanding their documentation, and resolving errors was a time-consuming 
 
@@ -137,3 +140,5 @@ The primary challenge was finding a suitable news API that included Swiss source
 - Multilingual Support: Including german, french, and italian search terms is necessary. This would allow to capture media outputs from all major news outlets across the country, meaning   a more comprehensive view of the media landscape.
 
 - Historical Data Comparison: Collecting and including data from previous elections would be valuable. We could better understand how media influence and public concerns have evolved over time. This could be integrated into the Shiny app to allow users to compare how different issues and party strengths have shifted from one election cycle to the next.
+
+- Color coding 'worries' based on the party ideology would make it visually easier to compare the relationship between the media salience of a topic and the majority party ideology.
