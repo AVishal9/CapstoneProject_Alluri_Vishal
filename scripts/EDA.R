@@ -2,7 +2,6 @@ library(tidyverse)
 library(ggplot2)
 library(wordcloud)
 
-# Load data
 load("data_original/all_articles.RData")
 
 # Select necessary columns
@@ -22,6 +21,7 @@ count_data <- selected_articles %>%
   group_by(worries) %>%
   summarise(count = n()) %>%
   arrange(count)
+
 
 ##SALIENCE_OF_TOPICS_IN_MEDIA ----
 # Reorder worries factor by count
