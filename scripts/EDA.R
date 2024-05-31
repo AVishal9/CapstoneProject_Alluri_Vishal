@@ -23,7 +23,7 @@ count_data <- selected_articles %>%
   summarise(count = n()) %>%
   arrange(count)
 
-#SALIENCE_OF_TOPICS_IN_MEDIA ----
+##SALIENCE_OF_TOPICS_IN_MEDIA ----
 # Reorder worries factor by count
 selected_articles <- selected_articles %>%
   mutate(worries = factor(worries, levels = count_data$worries))
@@ -34,7 +34,7 @@ bar_plot <- ggplot(selected_articles, aes(y = worries, fill = worries)) +
   theme_minimal() +
   labs(title = "Article Count by Worry Category", x = "Count", y = "Worry Category") 
 
-#TREND_PLOT ----
+##TREND_PLOT ----
 aggregated_data <- selected_articles %>%
   group_by(date, worries) %>%
   summarise(count = n()) %>%
@@ -50,7 +50,7 @@ trend_plot <- ggplot(aggregated_data, aes(x = date, y = count, color = worries))
   scale_x_date(expand = expansion(mult = c(0, 0.05)))
 
 
-# Word cloud
+## WORD CLOUD----
 wordcloud(words = count_data$worries, freq = count_data$count, 
           min.freq = 1, max.words = 100, random.order = FALSE, 
           colors = brewer.pal(8, "Dark2"))
@@ -61,4 +61,5 @@ ggsave("plots/most_covered_worry.png", plot = bar_plot)
 
 ggsave("plots/worry_coverage_trend.png", plot = trend_plot)
 
+#Manual save of wordcloud
 

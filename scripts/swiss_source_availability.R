@@ -1,7 +1,7 @@
 library(httr)
 library(jsonlite)
 
-api_token <- "CYSeowIHCwzUgoD4M0K9vr6KKQtjBTYv6XbC5cPZ"
+api_token <- Sys.getenv("NEWS_API_KEY")
 
 target_sources <- c("nzz.ch", "tagesanzeiger.ch", "20min.ch")
 
