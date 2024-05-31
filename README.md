@@ -13,7 +13,8 @@ across cantons.
   election and does the majority party goals align with these issues 
 
 FOLDER STRUCTURE:
-final_report.rmd: final project report
+final_report.rmd: 
+final_report.html final project report submission
 
 scripts:
 - data_extraction: Fetch data from api and storing
