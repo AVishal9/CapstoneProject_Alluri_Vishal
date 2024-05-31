@@ -65,8 +65,8 @@ search_terms <- list(
 3) The only Swiss news source used was swissinfo.ch (English articles). Other popular sources    were ignored as they publish articles in German, French, or Italian, which I do not speak,    making it difficult to create appropriate search terms in those languages.
 
 
-
-
+## Challenge
+The primary challenge was finding a suitable news API that included Swiss sources. Many APIs either lacked Swiss content, were discontinued, or required expensive subscriptions. After countless hours of searching TheNewsAPI was found (the most affordable option). Learning to use each API, understanding their documentation, and resolving errors was a time-consuming process that extended the project timeline
 
 
 ## Future Implementation ----
