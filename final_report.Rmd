@@ -46,15 +46,28 @@ Operationalization steps of Media Queries:
   (https://www.credit-suisse.com/sustainability/en/thought-leadership/worry-barometer.html)
 
 2) For each major topic identified by the Worry Barometer, specific search terms were created,    to search for articles from TheNewsAPI. The focus was on articles published within the        three months leading up to the election day - to capture the most relevant and recent media    coverage that could influence or reflect voters' preferences.
+
+```{r, echo=FALSE}
+search_terms <- list(
+  health = '"healthcare" | "health insurance"',
+  environment = '"environment" + "protection" | "climate change"',
+  retirement = '"AHV" | "retirement" + "provision"',
+  eu_relations = 'EU',
+  energy = '"Energy" + "issues"',
+  immigration = '"Foreigners" | "Immigration"',
+  inflation = '"Inflation"',
+  housing = '"housing + costs" | "rent"',
+  refugees = '"Refugees"',
+  social_security = '"Social" + "security"'
+)
+```
    
 3) The only Swiss news source used was swissinfo.ch (English articles). Other popular sources    were ignored as they publish articles in German, French, or Italian, which I do not speak,    making it difficult to create appropriate search terms in those languages.
 
 
 
 
-```{r}
 
-```
 
 ## Including Plots
 

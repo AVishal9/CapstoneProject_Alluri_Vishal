@@ -34,6 +34,7 @@ bar_plot <- ggplot(selected_articles, aes(y = worries, fill = worries)) +
   theme_minimal() +
   labs(title = "Article Count by Worry Category", x = "Count", y = "Worry Category") 
 
+
 ##TREND_PLOT ----
 aggregated_data <- selected_articles %>%
   group_by(date, worries) %>%
