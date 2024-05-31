@@ -78,7 +78,7 @@ for (worry_label in names(search_terms)) {
   }
 }
 
-save(all_articles, file = "data_extracted/all_articles.RData")
+save(all_articles, file = "data_original/all_articles.RData")
 
 
 

@@ -3,7 +3,7 @@ library(sf)
 library(ggplot2)
 library(rio)
 
-election_data <- rio::import("data/election_data.csv")
+election_data <- rio::import("data_map/election_data.csv")
 
 # Filter for canton-level results (based on kanton_nummer and kanton_bezeichnung) 
 canton_results <- election_data %>%
@@ -14,7 +14,7 @@ canton_results <- election_data %>%
 head(canton_results)
 
 # Import canton shapefile
-cantons_shp <- st_read("data/boundaries.shp/swissBOUNDARIES3D_1_5_TLM_KANTONSGEBIET.shp") %>%
+cantons_shp <- st_read("data_map/boundaries.shp/swissBOUNDARIES3D_1_5_TLM_KANTONSGEBIET.shp") %>%
   select(KANTONSNUM, NAME, geometry) %>%
   st_transform(crs = 4326) %>%  # Change encoding
   st_zm(drop = TRUE, what = "ZM") # Convert geometries to 2D (XY)

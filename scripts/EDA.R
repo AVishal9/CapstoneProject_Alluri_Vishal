@@ -3,7 +3,7 @@ library(ggplot2)
 library(wordcloud)
 
 # Load data
-load("data_extracted/all_articles.RData")
+load("data_original/all_articles.RData")
 
 # Select necessary columns
 selected_articles <- all_articles %>%
