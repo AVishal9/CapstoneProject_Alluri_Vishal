@@ -69,11 +69,13 @@ search_terms <- list(
 
 
 
-## Including Plots
+## Future Implementation ----
 
-You can also embed plots, for example:
+- Enhanced Search Queries: Expanding the set of search terms (by adding more keywords) could    help in filtering the data more effectively.
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
+- Multilingual Support: Including german, french, and italian search terms is necessary. This   would allow to capture media outputs from all major news outlets across the country, meaning   a more comprehensive view of the media landscape.
 
+- Historical Data Comparison: Collecting and including data from previous elections would be  
+  valuable. We could better understand how media influence and public concerns have evolved  
+  over time. This could be integrated into the Shiny app to allow users to compare how  
+  different issues and party strengths have shifted from one election cycle to the next.
