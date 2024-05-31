@@ -1,13 +1,10 @@
 ---
-title: "final_report"
-author: "Alluri_Vishal"
+title: "Data Mining for the Social Sciences - Capstone Project"
+author: "Alluri Vishal"
 date: "2024-05-31"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
 
 ## Introduction ----
 
@@ -47,7 +44,7 @@ Operationalization steps of Media Queries:
 
 2) For each major topic identified by the Worry Barometer, specific search terms were created,    to search for articles from TheNewsAPI. The focus was on articles published within the        three months leading up to the election day - to capture the most relevant and recent media    coverage that could influence or reflect voters' preferences.
 
-```{r, echo=FALSE}
+```{r}
 search_terms <- list(
   health = '"healthcare" | "health insurance"',
   environment = '"environment" + "protection" | "climate change"',
@@ -65,7 +62,22 @@ search_terms <- list(
 3) The only Swiss news source used was swissinfo.ch (English articles). Other popular sources    were ignored as they publish articles in German, French, or Italian, which I do not speak,    making it difficult to create appropriate search terms in those languages.
 
 
-## Challenge
+## Exploratory Data Analysis ----
+
+
+```{r}
+knitr::include_graphics(path = "plots/most_covered_worry.png")
+```
+
+```{r}
+knitr::include_graphics(path = "plots/article_trends.png")
+```
+
+```{r}
+knitr::include_graphics(path = "plots/map.png")
+```
+
+## Challenge ----
 The primary challenge was finding a suitable news API that included Swiss sources. Many APIs either lacked Swiss content, were discontinued, or required expensive subscriptions. After countless hours of searching TheNewsAPI was found (the most affordable option). Learning to use each API, understanding their documentation, and resolving errors was a time-consuming process that extended the project timeline
 
 
